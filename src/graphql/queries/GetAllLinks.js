@@ -12,4 +12,4 @@ const GET_LINKS = gql`
   }
 `;
 
-module.exports = GET_LINKS;
+export default GET_LINKS;

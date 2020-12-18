@@ -12,4 +12,4 @@ const CREATE_LINK = gql`
   }
 `;
 
-module.exports = CREATE_LINK;
+export default CREATE_LINK;
