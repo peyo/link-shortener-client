@@ -9,7 +9,7 @@ import App from "./components/App";
 // Pass your endpoint to uri
 const client = new ApolloClient({
   // Need to edit
-  uri: "https://yeor0.sse.codesandbox.io/",
+  uri: "https://link-shortener-server.herokuapp.com",
   cache: new InMemoryCache()
 });
 
