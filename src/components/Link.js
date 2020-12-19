@@ -7,6 +7,9 @@ import { makeStyles } from "@material-ui/core/styles";
 // Services
 import { copyToClipboard } from "../services/CopyToClipboard";
 
+// CopyToClipboard
+import Copy from "../assets/copy.png";
+
 const useStyles = makeStyles({
   link: {
     width: "300px",
@@ -45,7 +48,7 @@ export default function Link(props) {
           id="TextToCopy"
           onClick={(e) => handleOnClick(e, props.link.id)}
         >
-          <img alt="copy short link" src="../assets/copy.png" width="18px" />
+          <img alt="copy short link" src={Copy} width="18px" />
         </button>
       </div>
     </div>
