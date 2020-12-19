@@ -24,9 +24,9 @@ const useStyles = makeStyles({
   }
 });
 
-function handleOnClick(e) {
+function handleOnClick(e, id) {
   e.preventDefault();
-  copyToClipboard("mytext");
+  copyToClipboard(id);
 }
 
 export default function Link(props) {
@@ -37,15 +37,15 @@ export default function Link(props) {
       <ListItem>{props.link.description}</ListItem>
       <ListItem>{props.link.link}</ListItem>
       <div className={classes.shortLink}>
-        <ListItem id="mytext" className={classes.shortLinkText}>
+        <ListItem id={props.link.id} className={classes.shortLinkText}>
           {props.link.shortLink}
         </ListItem>
         <button
           className={classes.button}
           id="TextToCopy"
-          onClick={(e) => handleOnClick(e)}
+          onClick={(e) => handleOnClick(e, props.link.id)}
         >
-          <img alt="copy short link" src="./copy.png" width="18px" />
+          <img alt="copy short link" src="../assets/copy.png" width="18px" />
         </button>
       </div>
     </div>
